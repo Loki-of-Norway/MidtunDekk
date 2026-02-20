@@ -196,7 +196,7 @@ const LandingPage = () => {
       </section>
 
       {/* Services Section - Mer enn bare dekk! */}
-      <section ref={servicesRef} className="py-24 relative overflow-hidden" style={{ backgroundColor: '#F35900' }}>
+      <section id="tjenester" ref={servicesRef} className="py-24 relative overflow-hidden" style={{ backgroundColor: '#F35900' }}>
         <div className="container mx-auto px-6">
           {/* Header */}
           <div className="text-center mb-16">
@@ -284,7 +284,7 @@ const LandingPage = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 bg-brand-dark overflow-hidden">
+      <section id="om-oss" className="py-24 bg-brand-dark overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center gap-12">
              <div className="w-full md:w-1/2 flex justify-center">
@@ -324,118 +324,8 @@ const LandingPage = () => {
       </section>
 
 
-      {/* Forms Section - Bestill time & Dekkhotell */}
-      <section className="py-24 bg-brand-light" id="kontakt">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-varela font-bold text-brand-dark mb-4">Bestill tid eller dekkhotell</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Fyll ut skjemaet under, så tar vi kontakt med deg.</p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Bestill time */}
-            <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-t-4" style={{ borderColor: '#F35900' }}>
-              <h3 className="text-2xl font-varela font-bold text-brand-dark mb-2">Bestill time</h3>
-              <p className="text-gray-500 mb-8">Bestill tid for dekkservice.</p>
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-1">Navn</label>
-                  <input type="text" placeholder="Skriv inn ditt navn" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all" />
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-1">Telefonnummer</label>
-                    <input type="tel" placeholder="Ditt telefonnummer" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-1">E-post</label>
-                    <input type="email" placeholder="Din e-post" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all" />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-1">Ønsket dato</label>
-                  <input type="date" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all" />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-1">Kommentar</label>
-                  <textarea placeholder="Tilleggsinformasjon" rows={3} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all resize-none"></textarea>
-                </div>
-                <button type="submit" className="w-full bg-brand-orange hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-                  Send bestilling
-                </button>
-              </form>
-            </div>
-
-            {/* Legg inn på dekkhotell */}
-            <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-t-4" style={{ borderColor: '#F35900' }}>
-              <h3 className="text-2xl font-varela font-bold text-brand-dark mb-2">Legg inn på dekkhotell</h3>
-              <p className="text-gray-500 mb-8">Oppbevaring av dine dekk mellom sesongene.</p>
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-1">Navn</label>
-                  <input type="text" placeholder="Skriv inn ditt navn" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all" />
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-1">Telefon</label>
-                    <input type="tel" placeholder="Ditt telefonnummer" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-1">E-post</label>
-                    <input type="email" placeholder="Din e-post" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all" />
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-1">Antall dekk</label>
-                    <input type="number" placeholder="F.eks. 4" min="1" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-1">Ankomstdato</label>
-                    <input type="date" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all" />
-                  </div>
-                </div>
-                <button type="submit" className="w-full bg-brand-orange hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-                  Legg inn på dekkhotell
-                </button>
-              </form>
-            </div>
-          </div>
-
-          {/* Contact form below */}
-          <div className="max-w-2xl mx-auto mt-16">
-            <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-t-4" style={{ borderColor: '#F35900' }}>
-              <h3 className="text-2xl font-varela font-bold text-brand-dark mb-2 text-center">Kontakt oss</h3>
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-1">Navn</label>
-                    <input type="text" placeholder="Skriv inn ditt navn" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-1">E-post</label>
-                    <input type="email" placeholder="Din e-post" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all" />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-1">Telefon</label>
-                  <input type="tel" placeholder="Ditt telefonnummer" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all" />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-1">Melding</label>
-                  <textarea placeholder="Skriv din melding her" rows={4} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-orange/50 focus:border-brand-orange transition-all resize-none"></textarea>
-                </div>
-                <button type="submit" className="w-full bg-brand-orange hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-                  Send melding
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
-      <footer id="contact" className="bg-brand-dark text-white pt-24 pb-12 rounded-none mt-0 relative overflow-hidden">
+      <footer id="kontakt" className="bg-brand-dark text-white pt-24 pb-12 rounded-none mt-0 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
             <div className="absolute right-0 top-0 w-96 h-96 bg-brand-orange blur-[150px] rounded-full"></div>
