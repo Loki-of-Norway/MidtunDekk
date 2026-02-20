@@ -38,7 +38,7 @@ const FloatingWheel = () => {
                 setTimeout(() => {
                     const heroContent = document.getElementById('hero-content');
                     const target = heroContent ? heroContent.offsetTop : window.innerHeight * 3;
-                    gsap.to(window, { scrollTo: target, duration: 4, ease: 'power2.inOut' });
+                    gsap.to(window, { scrollTo: target, duration: 3, ease: 'power3.inOut' });
                 }, 300);
             }
         }, 100);
