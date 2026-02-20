@@ -35,8 +35,8 @@ const FloatingWheel = () => {
             if (window.scrollY === 0) {
                 clearInterval(checkScroll);
                 setTimeout(() => {
-                    const scrollContainer = document.querySelector('[data-scroll-container]');
-                    const target = scrollContainer ? scrollContainer.offsetTop + scrollContainer.offsetHeight : window.innerHeight * 3;
+                    const servicesSection = document.getElementById('tjenester');
+                    const target = servicesSection ? servicesSection.offsetTop : window.innerHeight * 3;
                     window.scrollTo({ top: target, behavior: 'smooth' });
                 }, 300);
             }
