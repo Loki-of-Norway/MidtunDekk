@@ -305,7 +305,7 @@ const LandingPage = () => {
                 <p className="text-gray-300 text-lg leading-relaxed">
                   Alexander har fagbrev som hjulutrustningsreparatør og har jobbet i bransjen i over 10 år. Han startet Midtun Dekk med et ønske om å levere kvalitet og service i alle ledd.
                 </p>
-                <div className="bg-white/5 p-6 rounded-[2rem] border-l-4 border-brand-orange">
+                <div className="bg-white/5 p-6 rounded-[2rem] border-l-4 border-r-4 border-[#F35900]">
                   <p className="italic text-gray-300">
                     "Vårt mål er at du skal være 100% fornøyd. Vi gir oss ikke før alt er perfekt."
                   </p>
