@@ -1,8 +1,9 @@
 ﻿import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const FloatingWheel = () => {
     const wheelRef = useRef(null);
@@ -37,7 +38,7 @@ const FloatingWheel = () => {
                 setTimeout(() => {
                     const heroContent = document.getElementById('hero-content');
                     const target = heroContent ? heroContent.offsetTop : window.innerHeight * 3;
-                    window.scrollTo({ top: target, behavior: 'smooth' });
+                    gsap.to(window, { scrollTo: target, duration: 4, ease: 'power2.inOut' });
                 }, 300);
             }
         }, 100);
