@@ -30,12 +30,14 @@ const FloatingWheel = () => {
 
     const handleClick = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        // After reaching top, scroll down a bit to play the animation forward
+        // After reaching top, scroll down to the end of the animation
         const checkScroll = setInterval(() => {
             if (window.scrollY === 0) {
                 clearInterval(checkScroll);
                 setTimeout(() => {
-                    window.scrollTo({ top: 600, behavior: 'smooth' });
+                    const scrollContainer = document.querySelector('[data-scroll-container]');
+                    const target = scrollContainer ? scrollContainer.offsetTop + scrollContainer.offsetHeight : window.innerHeight * 3;
+                    window.scrollTo({ top: target, behavior: 'smooth' });
                 }, 300);
             }
         }, 100);

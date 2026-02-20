@@ -109,7 +109,7 @@ export default function ScrollSequence({ frameCount = 151, pathPrefix = `${impor
 
   return (
     // Container is now simply h-screen to fill viewport, GSAP handles the rest
-    <div ref={containerRef} className="relative w-full h-screen overflow-hidden bg-black">
+    <div ref={containerRef} data-scroll-container className="relative w-full h-screen overflow-hidden bg-black">
         <canvas ref={canvasRef} className="absolute top-24 left-0 w-[calc(100%-4rem)] mx-8 h-[calc(100%-8rem)] object-cover rounded-[2rem] bg-white" />
     </div>
   );
