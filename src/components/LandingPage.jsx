@@ -131,7 +131,7 @@ const LandingPage = () => {
             <p className="text-lg text-gray-800 mb-8 leading-relaxed">
               Til de aller fleste biler finnes det en rekke dekk som passer. De skal selvsagt passe til de felgene som er på bilen. Og de skal være riktige ift. lovlige dimensjoner. Og ikke minst, så skal de passe til budsjettet ditt. Derfor kan du få alt fra rimelige dekk i god kvalitet, til premium dekk av aller beste merke. Alt dette hjelper vi deg med. Og husk at når du handler hos oss så garanterer vi at du blir 100% fornøyd.
             </p>
-            <a href="#kontakt" className="bg-brand-orange hover:bg-brand-dark text-white text-lg font-bold py-3 px-8 rounded-full transition-all shadow-lg inline-block" style={{ WebkitTextStroke: "0.5px #F35900" }}>
+            <a href="#kontakt" className="bg-transparent hover:bg-brand-orange text-[#F35900] hover:text-white text-lg font-bold py-3 px-8 rounded-full transition-all shadow-lg inline-block border-2 border-[#F35900]">
               Kontakt oss
             </a>
           </div>
