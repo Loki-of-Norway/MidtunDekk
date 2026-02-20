@@ -62,7 +62,7 @@ const LandingPage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center bg-brand-dark overflow-hidden pt-20">
+      <section id="hero-content" className="relative min-h-[90vh] flex items-center bg-brand-dark overflow-hidden pt-20">
          {/* Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-brand-dark via-[#0d2f3a] to-brand-dark opacity-100 -z-10"></div>
         <div className="absolute w-[500px] h-[500px] bg-brand-orange/10 rounded-full blur-3xl -top-20 -right-20"></div>
