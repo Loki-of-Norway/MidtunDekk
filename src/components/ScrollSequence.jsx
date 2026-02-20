@@ -1,11 +1,11 @@
-import { useRef, useState, useEffect } from "react";
+﻿import { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function ScrollSequence({ frameCount = 151, pathPrefix = "/frames/ezgif-frame-" }) {
+export default function ScrollSequence({ frameCount = 151, pathPrefix = `${import.meta.env.BASE_URL}frames/ezgif-frame-` }) {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
   const [images, setImages] = useState([]);
